@@ -69,7 +69,7 @@ and figures when available.
 
 Do not include unrelated information.
 If the answer is not available in the context,
-say "I don't know. The information is not available on the LinkedIn page.""""
+say "I don't know. The information is not available on the LinkedIn page."""
 
 if not OPENAI_API_KEY:
     raise ValueError("OPENAI_API_KEY is missing from .env")
