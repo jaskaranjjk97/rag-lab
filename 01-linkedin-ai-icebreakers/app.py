@@ -1,5 +1,5 @@
 """Gradio web interface for the Icebreaker Bot."""
-
+import os
 import logging
 import sys
 import uuid
@@ -121,7 +121,7 @@ def create_gradio_interface():
     with gr.Blocks(title="LinkedIn AI Icebreakers") as demo:
 
         # Session state
-        session_id=gr.State(value=None)
+        session_id = gr.State(value=None)
 
         gr.Markdown(
             """
@@ -132,14 +132,14 @@ def create_gradio_interface():
             """
         )
 
-
         with gr.Tab("Process Profile"):
 
-            linkedin_url=gr.Textbox(
+            linkedin_url = gr.Textbox(
                 label="LinkedIn Profile URL",
                 placeholder="https://www.linkedin.com/in/username/",
             )
-            use_mock=gr.Checkbox(
+
+            use_mock = gr.Checkbox(
                 label="Use mock profile data",
                 value=False,
             )
@@ -151,22 +151,18 @@ def create_gradio_interface():
 
             result_text = gr.Markdown()
 
-            process_btn.click(
-                fn=process_profile,
-                inputs=[linkedin_url,use_mock],
-                outputs=[result_text,session_id,chatbot],
-            )
-
         with gr.Tab("Chat"):
 
-            gr.Markdown("Ask questions about the processed LinkedIn profile.")
+            gr.Markdown(
+                "Ask questions about the processed LinkedIn profile."
+            )
 
             chatbot = gr.Chatbot(
                 height=500,
                 label="Profile Assistant",
             )
 
-            chat_input=gr.Textbox(
+            chat_input = gr.Textbox(
                 label="Your question",
                 placeholder="What companies has this person worked for?",
             )
@@ -185,6 +181,13 @@ def create_gradio_interface():
                 outputs=[chatbot, chat_input],
             )
 
+        # Register after all components have been created
+        process_btn.click(
+            fn=process_profile,
+            inputs=[linkedin_url, use_mock],
+            outputs=[result_text, session_id, chatbot],
+        )
+
     return demo
 
 if __name__=="__main__":
@@ -192,7 +195,6 @@ if __name__=="__main__":
 
     demo.queue().launch(
         server_name="0.0.0.0",
-        server_port=7860,
+        server_port=int(os.environ.get("PORT", 7861)),
     )
-
 
