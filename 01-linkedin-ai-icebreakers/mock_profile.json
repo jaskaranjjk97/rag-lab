@@ -1,0 +1,131 @@
+{
+  "full_name": "Leon Katsnelson",
+  "title": "CTO, IBM Skills Network",
+  "headline": "CTO, IBM Skills Network. Helping leading organizations upskill employees in the latest technologies.",
+  "summary": "I am a serial Intrepreneur with a number of very successful projects to my credit. My responsibility is to push frontiers of technology to create next generation products to help people develop skills in the area of AI, Data Science, Cloud-native Development, DevOps, Data Engineering Big Data, Data Analytics, Cybersecurity and more. A technologist at heart, I focus on value creation using technology rather than technology itself. I am a relentless pursuer of product-market fit. As a Definite Optimist I believe in envisioning the future, and, since vision without a plan is a hallucination, I like to map out a path to achieving the goal. I am motivated by grand visions, hugely ambitious goals and barely possible challenges.\n\nI prefer small purpose-driven teams. I believe that building the right team is even more important than building the right product. I am honoured to have assembled and lead what I consider to be the best team in the industry. Young, smart, united by a common purpose the team has demonstrated their ability to overcome the toughest obstacles and go toe-to-toe with the best venture funded startups.\n\nI also advise a number of promising startups. It is something that I enjoy as it helps me apply my experience towards helping the next generation of entrepreneurs.\n\nSpecialties: AI, Database systems, Big Data, Data Science and Cloud Computing.",
+  "industry": "Technology",
+  "location": {
+    "default": "Markham, Ontario, Canada"
+  },
+  "position_groups": [
+    {
+      "company": {
+        "name": "IBM"
+      },
+      "profile_positions": [
+        {
+          "title": "Director & CTO, IBM Skills Network",
+          "employment_type": "",
+          "location": "Toronto, Ontario, Canada",
+          "date": {
+            "start": "2014-09",
+            "end": ""
+          },
+          "description": "Developer Advocacy and Engagement: Cultivating the current and next generation developer community. Driving awareness, consideration, preference and loyalty within developer community.\n\nIncubating next generation mobile and cloud projects in the area of information management and analytics. Keeping an eye on emerging technology and development processes for IBM product teams."
+        },
+        {
+          "title": "Director, Cloud & Mobile Information Management",
+          "employment_type": "",
+          "location": "World Wide Responsibility",
+          "date": {
+            "start": "2013-07",
+            "end": "2014-09"
+          },
+          "description": ""
+        },
+        {
+          "title": "Program Director",
+          "employment_type": "",
+          "location": "",
+          "date": {
+            "start": "1985-05",
+            "end": "2013-07"
+          },
+          "description": "Responsible for competitive positioning of DB2 database products with respect to database and related offerings from Microsoft, Oracle and the open-source community."
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Maryland Association of CPAs - MACPA"
+      },
+      "profile_positions": [
+        {
+          "title": "Member Board Of Directors",
+          "employment_type": "",
+          "location": "Baltimore, Maryland Area",
+          "date": {
+            "start": "2018-06",
+            "end": ""
+          },
+          "description": "The Maryland Association of CPAs supports the CPA profession and its members through professional infrastructure, connection and development."
+        }
+      ]
+    }
+  ],
+  "educations": [
+    {
+      "school": {
+        "name": "York University"
+      },
+      "degree_name": "Honours BSc",
+      "field_of_study": "Computer Science",
+      "date": {
+        "start": "1982",
+        "end": "1985"
+      }
+    }
+  ],
+  "skills": [
+    "Edtech",
+    "Artificial Intelligence (AI)",
+    "Entrepreneurship",
+    "Business Development",
+    "Cloud Computing",
+    "Enterprise Software",
+    "Databases",
+    "Software Engineering",
+    "Big Data",
+    "Enterprise Architecture",
+    "Product Management",
+    "Product Development",
+    "Portfolio Management",
+    "Business Intelligence",
+    "Software Development",
+    "IT Strategy",
+    "Solution Architecture",
+    "Agile Project Management",
+    "Performance Tuning",
+    "Distributed Systems",
+    "Data Warehousing",
+    "Software Project Management",
+    "Integration",
+    "Database Design",
+    "Data Modeling",
+    "Requirements Analysis",
+    "High Availability",
+    "Programming",
+    "Architecture",
+    "Business Strategy",
+    "ETL",
+    "Program Management",
+    "SaaS",
+    "SQL",
+    "Relational Databases",
+    "DB2",
+    "Hadoop",
+    "Unix",
+    "Blockchain",
+    "Open Source",
+    "Amazon Web Services (AWS)",
+    "Management",
+    "Leadership",
+    "Technical Leadership",
+    "Mentoring",
+    "Innovation",
+    "Database Systems",
+    "PaaS",
+    "Hive"
+  ],
+  "certifications": []
+}

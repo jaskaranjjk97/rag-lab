@@ -1,0 +1,20 @@
+
+# LlamaIndex
+llama-index-core==0.11.8
+llama-index-llms-openai==0.2.0
+llama-index-embeddings-openai==0.2.3
+
+# HTTP requests
+requests==2.32.2
+
+# Environment and validation
+python-dotenv==1.0.1
+pydantic==2.10.6
+
+# Gradio UI
+gradio==4.44.1
+huggingface_hub==0.23.5
+
+# Gradio compatibility pins
+fastapi==0.115.14
+starlette==0.46.2
