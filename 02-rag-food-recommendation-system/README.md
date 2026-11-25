@@ -6,7 +6,7 @@ The project combines semantic search, ChromaDB, metadata filtering, and an OpenA
 
 ## Live Demo
 
-**Live Application:** [Open Food Recommendation Assistant](YOUR_DEPLOYED_APP_URL)
+**Live Application:** [Open Food Recommendation Assistant](https://food-recommendation-rag.streamlit.app/)
 
 
 ## Application Screenshots
