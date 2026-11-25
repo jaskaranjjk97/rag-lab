@@ -8,35 +8,38 @@ The project combines semantic search, ChromaDB, metadata filtering, and an OpenA
 
 **Live Application:** [Open Food Recommendation Assistant](YOUR_DEPLOYED_APP_URL)
 
+
 ## Application Screenshots
 
 ### 1. Search with all filters
 
 Search using cuisine, maximum calories, and dietary preference together.
 
-
+![Search with all filters](docs/screenshots/01-query-with-all-filters.png)
 
 ### 2. Italian cuisine filtering
 
 Retrieve food recommendations using a cuisine preference.
 
-
+![Italian cuisine filtering](docs/screenshots/02-query-with-Italian-filter.png)
 
 ### 3. General food search
 
 Ask for recommendations without applying additional metadata filters.
 
-
+![General food search](docs/screenshots/03-general-query-without-any-filters.png)
 
 ### 4. Non-vegetarian query without a dietary filter
 
 This example shows that semantic search alone may return vegetarian records even when the user requests non-vegetarian food.
 
-
+![Non-vegetarian query without filter](docs/screenshots/04-non_veg-query-without-filter.png)
 
 ### 5. Non-vegetarian query with a dietary filter
 
-After enabling the non-vegetarian metadata filter, the system retrieves four matching recommendations.
+After enabling the non-vegetarian metadata filter, the system retrieves matching recommendations.
+
+![Non-vegetarian query with filter](docs/screenshots/05-non_veg-query-with-non_veg-filter.png)
 
 
 
@@ -61,26 +64,23 @@ After enabling the non-vegetarian metadata filter, the system retrieves four mat
 
 ```mermaid
 flowchart TD
-    A["Food Dataset (JSON)"] --> B["Data Loading and Preprocessing"]
+    A["Food Dataset JSON"] --> B["Data Loading and Preprocessing"]
     B --> C["Document Creation"]
     B --> D["Metadata Creation"]
-
     C --> E["Embedding Generation"]
     E --> F[("ChromaDB Vector Store")]
     D --> F
 
-    G["User Query"] --> H["Streamlit / CLI"]
+    G["User Query"] --> H["Streamlit or CLI"]
     H --> I["RAG Pipeline"]
     I --> J["Query Embedding"]
     J --> K["Semantic Retrieval"]
     F --> K
-
-    L["Cuisine / Calories / Dietary Filters"] --> M["Metadata Filtering"]
-    K --> M
-    M --> N["Retrieved Food Records"]
-    N --> O["Prompt Construction"]
-    O --> P["OpenAI Chat Model"]
-    P --> Q["Response with Source Citations"]
+    L["User Filters"] --> M["Metadata Filtering"]
+    M --> K
+    K --> N["Retrieved Food Records"]
+    N --> O["LLM Response Generation"]
+    O --> P["Answer with Source Citations"]
 ```
 
 ### 2. Retrieval and generation
@@ -90,9 +90,8 @@ flowchart TD
     A["User Query and Preferences"] --> B["Prepare Metadata Filters"]
     B --> C["Generate Query Embedding"]
     C --> D["ChromaDB Retrieval"]
-    D --> E["Apply Selected Metadata Conditions"]
+    D --> E["Apply Metadata Conditions"]
     E --> F{"Matching Records Found?"}
-
     F -->|No| G["Return No-Match Response"]
     F -->|Yes| H["Prepare Retrieved Context"]
     H --> I["Build User Prompt"]
